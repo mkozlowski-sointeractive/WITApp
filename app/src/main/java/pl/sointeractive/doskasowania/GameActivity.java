@@ -61,6 +61,7 @@ public class GameActivity extends ActionBarActivity {
 
                         if (proximity == Utils.Proximity.IMMEDIATE && b.getMajor()==major && b.getMinor()==minor) {
                                 Toast.makeText(GameActivity.this,"BOMBA",Toast.LENGTH_LONG).show();
+
                             //znaleziono
                                 webView.loadUrl("file:///android_asset/bomb app/output/03/bomb-app_03.html");
                                 deactiveBtn.setVisibility(View.VISIBLE);
@@ -74,7 +75,7 @@ public class GameActivity extends ActionBarActivity {
                         }
                         else {
                              Toast.makeText(GameActivity.this,"FIND",Toast.LENGTH_LONG).show();
-                            //znajdz
+                            //szukanie
                             webView.loadUrl("file:///android_asset/bomb app/output/02/bomb-app.html");
                             deactiveBtn.setVisibility(View.INVISIBLE);
 
@@ -91,7 +92,7 @@ public class GameActivity extends ActionBarActivity {
     private void setUpWebView() {
 
         webView.getSettings().setJavaScriptEnabled(true);
-        //znajdz
+        //szukanie
         webView.loadUrl("file:///android_asset/bomb app/output/02/bomb-app.html");
         webView.setBackgroundColor(Color.TRANSPARENT);
 
@@ -102,7 +103,7 @@ public class GameActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 countDownTimer.cancel();
-                //zdeaktywuj
+                //deaktywuj
                 webView.loadUrl("file:///android_asset/bomb app/output/04/bomb-app_04.html");
 
                 try {
@@ -124,8 +125,8 @@ public class GameActivity extends ActionBarActivity {
             }
 
             public void onFinish() {
+                //wybuch
                 timer.setText("Bomba wybuchla BOOOM!");
-                //wybuchla
                 webView.loadUrl("file:///android_asset/bomb app/output/05/bomb-app_05.html");
 
                 try {
