@@ -61,7 +61,8 @@ public class GameActivity extends ActionBarActivity {
 
                         if (proximity == Utils.Proximity.IMMEDIATE && b.getMajor()==major && b.getMinor()==minor) {
                                 Toast.makeText(GameActivity.this,"BOMBA",Toast.LENGTH_LONG).show();
-                                webView.loadUrl("file:///android_asset/find.html");
+                            //znaleziono
+                                webView.loadUrl("file:///android_asset/bomb app/output/03/bomb-app_03.html");
                                 deactiveBtn.setVisibility(View.VISIBLE);
 
                             Log.e(TAG, "entered in (IMMEDIATE)minor " + b.getMinor());
@@ -73,8 +74,8 @@ public class GameActivity extends ActionBarActivity {
                         }
                         else {
                              Toast.makeText(GameActivity.this,"FIND",Toast.LENGTH_LONG).show();
-
-                            webView.loadUrl("file:///android_asset/search.html");
+                            //znajdz
+                            webView.loadUrl("file:///android_asset/bomb app/output/02/bomb-app.html");
                             deactiveBtn.setVisibility(View.INVISIBLE);
 
                         }
@@ -90,7 +91,8 @@ public class GameActivity extends ActionBarActivity {
     private void setUpWebView() {
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("file:///android_asset/search.html");
+        //znajdz
+        webView.loadUrl("file:///android_asset/bomb app/output/02/bomb-app.html");
         webView.setBackgroundColor(Color.TRANSPARENT);
 
     }
@@ -100,7 +102,8 @@ public class GameActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 countDownTimer.cancel();
-                webView.loadUrl("file:///android_asset/deactive.html");
+                //zdeaktywuj
+                webView.loadUrl("file:///android_asset/bomb app/output/04/bomb-app_04.html");
 
                 try {
                     beaconManager.stopRanging(ALL_ESTIMOTE_BEACONS);
@@ -122,7 +125,8 @@ public class GameActivity extends ActionBarActivity {
 
             public void onFinish() {
                 timer.setText("Bomba wybuchla BOOOM!");
-                webView.loadUrl("file:///android_asset/boom.html");
+                //wybuchla
+                webView.loadUrl("file:///android_asset/bomb app/output/05/bomb-app_05.html");
 
                 try {
                     beaconManager.stopRanging(ALL_ESTIMOTE_BEACONS);
