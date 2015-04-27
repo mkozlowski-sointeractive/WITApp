@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Doskasowania</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_start_game">StartGameActivity</string>
+    <string name="button_start">Start Game</string>
+    <string name="time_text">Time Left :</string>
+    <string name="deactivate_text">Deaktywuj Bombe</string>
+
+
+
+</resources>
