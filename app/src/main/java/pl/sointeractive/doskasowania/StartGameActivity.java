@@ -2,12 +2,17 @@ package pl.sointeractive.doskasowania;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.os.RemoteException;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.estimote.sdk.BeaconManager;
+import com.estimote.sdk.EstimoteSDK;
 
 
 public class StartGameActivity extends ActionBarActivity {
@@ -15,6 +20,7 @@ public class StartGameActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //EstimoteSDK.initialize(this, "YOUR APP ID", "YOUR APP TOKEN");
         setContentView(R.layout.activity_start_game);
 
         findViewById(R.id.startBtn).setOnClickListener(new View.OnClickListener() {
@@ -24,6 +30,7 @@ public class StartGameActivity extends ActionBarActivity {
 
             }
         });
+
 
 
     }

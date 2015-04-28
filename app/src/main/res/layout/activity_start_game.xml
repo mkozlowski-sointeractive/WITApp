@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -8,15 +8,31 @@
     tools:context="pl.sointeractive.doskasowania.StartGameActivity"
     android:gravity="center"
     >
-
+<ImageView
+    android:id="@+id/soi_logo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@raw/logo_sointeractive_kolor"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="68dp"
+    android:layout_alignParentEnd="true" />
+    <ImageView
+        android:id="@+id/wit_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@raw/logo_wit"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/soi_logo" />
 
     <Button
         android:id="@+id/startBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_start"
+        android:layout_below="@+id/wit_logo"
+        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@+id/wit_logo"
+        android:layout_alignStart="@+id/wit_logo" />
 
-        />
 
-
-</LinearLayout>
+</RelativeLayout>
