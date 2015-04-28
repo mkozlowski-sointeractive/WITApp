@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.estimote.sdk.Beacon;
 import com.estimote.sdk.BeaconManager;
+
 import com.estimote.sdk.Region;
 import com.estimote.sdk.Utils;
 
